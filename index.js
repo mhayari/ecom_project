@@ -29,10 +29,14 @@ app.use('/api/product',productRouter)
 app.use('/api/braintree',braintreeRoutes)
 app.use('/api/order',orderRoutes)
 
+app.use(express.static('front/build'))
+app.get('*',(req,res)=>{
+    res.sendFile(`${__dirname}/front/build/index.html`)
+})
 mongoose.set('strictQuery', false)
 mongoose.connect(process.env.DATABASE)
 
-const PORT=process.env.PORT||3000
+const PORT=process.env.PORT||8000
 app.listen(PORT,()=>console.log(`running ${PORT} ...`))
 
 
