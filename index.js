@@ -3,7 +3,7 @@ const mongoose=require('mongoose')
 const cors=require('cors')
 const expressValidator = require('express-validator');
 const cookieParser = require('cookie-parser');
-
+const helmet=require('helmet')
 
 //
 const adminRouter=require('./router/auth')
@@ -19,7 +19,7 @@ app.use(cors())
 require('dotenv').config()
 app.use(expressValidator())
 app.use(cookieParser());
-
+app.use(helmet())
 
 //middleware router
 app.use('/api',authRouter)

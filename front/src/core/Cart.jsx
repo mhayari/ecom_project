@@ -10,7 +10,7 @@ import Checkout from "./Checkout"
 
 const Cart = () => {
     const cart=useSelector(state=>state.cart.cartItems)
-    // console.log(cart)
+    console.log(cart)
     const Dispatch=useDispatch()
   
 
@@ -35,7 +35,7 @@ const Cart = () => {
               </thead>
               <tbody>
               {cart.length<1?<tr className="text-center"><td colSpan={6}>----- <strong>no items</strong> ------</td></tr>:
-        cart.map((item,i)=>(
+        cart.length&&cart.map((item,i)=>(
             <tr key={item._id}>
               <td>{i+1}</td>
               <td width="80px" ><ShowImage  item={item} className="card-img-top"  url='product/photo'  alt={item.name}/></td>

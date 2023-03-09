@@ -14,6 +14,7 @@ const Checkout = ({cart}) => {
         instance:{},
         address:''
     })
+    console.log(data)
     const handelInput=(e)=>{
       setData({...data,address:e.target.value})
     }

@@ -13,8 +13,10 @@ exports.generateToken=(req, res) => {
     gateway.clientToken.generate({}, (err, response) => {
         if(err){
             res.status(500).json({error:err})
+            console.log(err.message)
         }
       res.json({token:response.clientToken});
+      
     });
   };
 

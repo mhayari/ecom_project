@@ -12,7 +12,7 @@ const Menu = () => {
   const navigate=useNavigate() 
   const cart=useSelector(state=>state.cart.cartItems)
 // console.log((cart))
-console.log(isAuthenticate())
+// console.log(isAuthenticate())
   const handelSignOut=_=>{
     axios.get(`${API_URL}/signOut`).then(()=>{toastr.success('You quit','by',{positionClass:"toast-bottom-left"})
     localStorage.removeItem('jwt_info')
