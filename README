@@ -14,7 +14,7 @@
 2. #### install npm packages
     1. install backend packages
     ```bash
-    cd ecommerce
+    cd 
     npm install
     ```
     2. install frontend packages

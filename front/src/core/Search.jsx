@@ -3,6 +3,7 @@ import { getProducts } from '../redux/reducer/productReducer'
 import {getCategories} from '../redux/reducer/categoryReducer'
 import Card from './Card'
 import { useDispatch,useSelector } from 'react-redux'
+import  './forme.css'
 
 const Search = () => {
     // const [categories,setCategories]=useState([])
@@ -29,8 +30,8 @@ Dispatch(getCategories())
     },[])
   return (
     <div>
-      <form onSubmit={handelSubmit}>
-        <div className="input-group input-group-lg">
+      <form  onSubmit={handelSubmit}>
+        <div id='form' className="input-group input-group-lg">
             <div className="input-group-prepend">
                 <select onChange={handelChange} id="category"  className="btn-outline-info rounded">
                     <option  value="">Select a Category</option>
@@ -40,7 +41,9 @@ Dispatch(getCategories())
                     ))}
                 </select>
             </div>
-            <input onChange={handelChange} id="search" type="search" className="form-control mx-4" />
+            <div id='div' className="form-control rounded  ">
+            <input onChange={handelChange} id="search" type="search" className="form-control  inpo  " />
+            </div>
             <div className="input-group-append">
                 <button className="btn">Search</button></div>
         </div>

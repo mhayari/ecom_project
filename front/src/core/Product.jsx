@@ -18,11 +18,11 @@ const Product = () => {
   return (
     <>
         {product&&product.name&&(
-    <Layout title={product.name} description={product.description.substring(0,100)} className='container'>
+    <Layout title={product.name}  className='container'>
       <div className="row">
         <div className="col-md-8">
         <Card product={product} showButton={true}/>
-
+        {product.description}
         </div>
         <div  className="col-md-4">
             {related.map(product=>(

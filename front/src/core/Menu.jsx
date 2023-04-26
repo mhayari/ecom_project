@@ -26,8 +26,8 @@ const Menu = () => {
     <button
       className="navbar-toggler"
       type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarTogglerDemo02"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo02"
       aria-controls="navbarTogglerDemo02"
       aria-expanded="false"
       aria-label="Toggle navigation"

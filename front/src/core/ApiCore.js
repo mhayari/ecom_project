@@ -16,16 +16,27 @@ export const getRelatedProduct=async(id)=>{
    return axios.get(`${API_URL}/product/related/${id}`).then(res=>res.data).catch(err=>err.message)
 }
 
-export const getBraintreeToken=async(userId,token)=>{
+export const getBrain9treeToken=async(userId,token)=>{
  
    return  axios.get(`${API_URL}/braintree/getToken/${userId}`,{
       headers:{
-         ContentType:"application/json",
+         "Content-Type":"application/json",
          Authorization:`Bearer ${token}`
       }
    }).then(res=>res.data)
 }
 
+export const getBraintreeToken=(userId,token)=>{
+ 
+   return fetch(`${API_URL}/braintree/getToken/${userId}`,{
+      method:"GET",
+      headers:{
+                  Accept:"application/json",
+                  "Content-Type":"application/json",
+                  Authorization:`Bearer ${token}`
+               }
+   }).then(res=>res.json())
+}
 export const processPayment=async(userId,token,paymentData)=>{
  
    return fetch(`${API_URL}/braintree/purchase/${userId}`,{

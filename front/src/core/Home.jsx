@@ -18,7 +18,6 @@ const Home = () => {
     loadArrivals()
   },[])
   return (
-    <div>
     <Layout title='Hom Page' description='Home ' className='container'>
       <Search/>
         <h1>Arrival Products</h1>
@@ -39,7 +38,6 @@ const Home = () => {
         ))}
         </div>
     </Layout>
-    </div>
   )
 }
 

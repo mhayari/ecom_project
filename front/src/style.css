@@ -8,7 +8,16 @@
     -moz-animation: Gradient 15s ease infinite;
     animation: Gradient 15s ease infinite;
 }
- 
+/* @media (min-width:400px) {
+    
+    .card{
+        width: 300px;
+    }
+} */
+
+
+
+
 @-webkit-keyframes Gradient {
     0% {
         background-position: 0% 50%;

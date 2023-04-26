@@ -38,9 +38,9 @@ const Cart = () => {
         cart.length&&cart.map((item,i)=>(
             <tr key={item._id}>
               <td>{i+1}</td>
-              <td width="80px" ><ShowImage  item={item} className="card-img-top"  url='product/photo'  alt={item.name}/></td>
+              <td width="120px" ><ShowImage  item={item} className="card-img-top"  url='product/photo'  alt={item.name}/></td>
             <td><h5>{item.name}</h5>
-            <p className="well">{item.description}</p>
+            <p className="well">{item.description.substring(0,50)}...</p>
             </td>
             <td >
                 <div className="btn-group" role="group" aria-label="Basic example">

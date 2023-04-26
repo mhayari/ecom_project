@@ -1,0 +1,25 @@
+.inpo{
+    outline: none;
+    border: none;
+}
+@media (max-width:500px) {
+    form{
+        margin: auto;
+        width: 200px;
+    }
+    #form{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        }
+    #div {
+        width: 180px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+       
+    }
+#div{
+    margin-left: 10px;
+    margin-right: 10px;
+}

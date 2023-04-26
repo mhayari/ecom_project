@@ -13,7 +13,6 @@ exports.generateToken=(req, res) => {
     gateway.clientToken.generate({}, (err, response) => {
         if(err){
             res.status(500).json({error:err})
-            console.log(err.message)
         }
       res.json({token:response.clientToken});
       
@@ -22,7 +21,6 @@ exports.generateToken=(req, res) => {
 
   exports.processPayment=(req,res)=>{
     let {amount,paymentMethodNonce}=req.body
-    console.log(23,req.body)
     gateway.transaction.sale({
       amount:amount,
       paymentMethodNonce:paymentMethodNonce,options:{

@@ -11,9 +11,9 @@ const Card = ({product,showButton}) => {
 }
   return (
     <>
-      <div className="card bg-secondary text-light px-2 my-2">
+      <div className="card bg-secondary text-light px-2 my-2" >
         <div className="card-header"><h4 className='display-6'>{product.name}</h4></div>
-       <ShowImage item={product} url="product/photo" className="card-img-top"/>
+       <ShowImage  item={product} url="product/photo" className="card-img-top"  />
         <div className="card-body">
             <p>{product.description.substring(0,50)}</p>
             <div className='text-center m-3'>
